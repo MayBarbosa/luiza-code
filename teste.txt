@@ -1,2 +1,2 @@
 primeira linha teste
-clear
+Segunda linha teste
