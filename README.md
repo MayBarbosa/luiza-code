@@ -1,2 +1,2 @@
 # luiza-code
-Aulas do Luiza Code
+Testes e exercícios das Aulas do Luiza Code <3
