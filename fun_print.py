@@ -1,2 +1,2 @@
-nome = str(input("Informe seu nome: "))
-print(f"O meu nome é {nome}")
+nome = str(input("Olá, qual é o seu nome? "))
+print(f"Muito prazer, {nome}!")
