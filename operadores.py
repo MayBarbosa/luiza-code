@@ -15,10 +15,8 @@
 variavel1 = int(input("Insira o primeiro Número: "))
 variavel2 = int(input("Insira o segundo Número: "))
 
-# if variavel1 > 0 and variavel2 < 10:
-#     print("É Verdadeiro")
-
 if variavel1 > 0 and variavel2 < 10:
     print("É verdadeiro")
 else:
     print("É falso")
+#===============================================
