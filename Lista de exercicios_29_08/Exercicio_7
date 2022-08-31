@@ -1,0 +1,18 @@
+ovo = 3.4
+caju = 12.4
+
+resposta1 = ovo if 1 > 2 else caju
+print(resposta1)
+
+resposta2 = ovo if ovo > caju else caju
+print(resposta2)
+
+resposta3 = ovo if ovo < caju else caju
+print(resposta3)
+
+resposta4 = 100 if ovo + caju > 15 else 200
+print(resposta4)
+
+resposta5 = 100 if ovo == 3 else 0
+print(resposta5)
+
