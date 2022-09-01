@@ -1,0 +1,100 @@
+# a = 2.00
+# print(type(a))
+# print(type(int(a)))
+
+# b = ['celular', 'relogio', 'copo']
+# print(type(b))
+# print(type(tuple(b)))
+
+# def calcula_salario(valor, horas=220):
+#     return valor * horas
+
+# print(calcula_salario(20))
+
+# lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,]
+
+# # map
+
+# def calcula_elemento_por_ele_mesmo(elemento):
+#     return elemento + elemento
+
+# lista = map(lambda elemento: elemento + elemento, lista)
+
+# print(list(lista))
+
+# reduce
+
+# from functools import reduce
+
+# lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+# def func_somar_todos(x, y):
+#     return x + y
+
+# lista = reduce(func_somar_todos, lista)
+# print(lista)
+
+# kwargs
+
+# def foo(**kwargs):
+#     nome = kwargs.get('nome', 'thais')
+#     print(nome)
+
+# foo(
+#     nome = "Mayara",
+#     idade = "27"
+# )
+
+# def foo(*args):
+#    for i in args:
+#         if i == 'PM':
+#             print("tem o cargo")
+
+
+# print("segue o jogo")
+
+# foo('May', '27', 'PM')
+# foo('May', '27', 'PM', 'casada')
+
+# import time
+
+# def decorator(funcao):
+#     def wrapper():
+#         tempo_inicio = time.time()
+#         funcao()
+#         tempo_final = time.time()
+
+#         calculo = tempo_final - tempo_inicio
+
+#         print(f'A {funcao.__name__}, levou total de {calculo} para ser executada')
+
+
+#     return wrapper
+
+# @decorator
+# def run():
+#     for n in range(736373813047920470934097425341234567891234567890123456789234567820479471):
+#         yield
+
+# run()
+
+cart = []
+for i in range(3):
+    id_user = input("usuário 10")
+    id_produto = str(input("produto "))
+    price = float(input("preço "))
+    quantity = int(input("quantidade "))
+
+item = [id_user, id_produto, price, quantity]
+
+def add_item_cart(item):
+    pass
+
+def get_all_items():
+    pass
+def get_tem_cart_by_id(id_produto):
+    pass
+
+def remove_item_id(id_product):
+    pass
+

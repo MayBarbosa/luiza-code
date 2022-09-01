@@ -1,0 +1,130 @@
+#EXERCÍCIO 1
+
+# >>> type(1)
+# <class 'int'>
+# >>> type(12.6)
+# <class 'float'>
+# >>> type(True)
+# <class 'bool'>
+# >>> type(False)
+# <class 'bool'>
+# >>> type(-543)
+# <class 'int'>
+# >>> type(-5.78)
+# <class 'float'>
+# >>> type("copo")
+# <class 'str'>
+# >>> type('belo dia')
+# <class 'str'>
+
+#EXERCÍCIO 2
+
+# 1 - Correto
+# 1a - Errado
+# a1 - Errado
+# 1. - Correto
+# .2 - Correto
+# -.3 - Correto
+# 'agua"limpa' - Correto
+# "agua"" - Errado
+# """teste 1 2 3""" - Correto
+
+#EXERCÍCIO 3
+
+# a. Operadores matemáticos
+    # i. 10 + 3 = 13
+    # ii. 10 - 3 = 10
+    # iii. 10 * 3 = 30
+    # iv. 10 / 3 = 3.33333333335
+    # v. 10 / 3.0 = 3.33333333335
+    # vi. 13 / 3 = 4.333333333333333
+    # vii. 13 / 3.0 = 4.333333333333333
+    # viii. 13 // 3.0 = 4.0
+# b. Ordem dos operadores
+    # i. 5 + 30 * 20 = 605
+    # ii. (5 + 30) * 20 = 700
+    # iii. ((5 + 30) * 20) / 10 = 70.0
+    # iv. 5 + 30 * 20 / 10 = 65.0
+# c. Operadores comparação
+    # i. 2 < 3 = True
+    # ii. 9 > 8 = True
+    # iii. 1 == 1 = True
+    # iv. 1 != 2 = True
+    # v. 1 != 1 = False
+    # vi. 4 <= 4 = True
+    # vii. 5 >= 6 = False
+    # viii. 1 < 2 < 3 = True
+    # ix. 1 < 2 < 2 = False
+    # x. 1 + 2 < 25 / 5 = True
+# d. Mais operadores matemáticos:
+    # i. 2 ** 4 = 16
+    # ii. 26 % 5 = 1
+# e. Operadores lógicos
+    # i. not True = False
+    # ii. not False = True
+    # iii. True and True = True
+    # iv. True and False = False
+    # v. False and True = False
+    # vi. False and False = False
+    # vii. True or True = True
+    # viii. True or False = True
+    # ix. False or True = True
+    # x. False or False = False
+    # xi. True or True and False = True
+    # xii. (True or True) and False = False
+    # xiii. not True or False = False
+    # xiv. not (True or False) = False
+    # xv. not (True and False) and (True or False) = True
+    # xvi.1 > 2 and 3 > 4 = False
+    # xvii. 1 > 2 and 3 < 4 = False
+    # xviii. 1 < 2 and 3 < 4 = True
+    # xix.1 + 2 and 3 + 4 = 7
+    # xx. 1 + 2 or 3 + 4 = 3
+    # xxi.True and 3 > 5 = False
+    # xxii. False and 3 >5 = False
+
+#EXERCÍCIO 4
+
+# x = 80
+
+
+#EXERCÍCIO 5
+
+#A) 4
+#B) 114.0
+#C) 2
+#D) O total é 6, e a média é 2.0
+#E) True
+
+#EXERCICIO 6
+
+# z = 3 + 2 * 6 / 5
+
+# print(z)
+
+#EXERCICIO 7
+
+# 12.4
+# 12.4
+# 3.4
+# 100
+# 0
+
+#EXERCICIO 8
+
+# fim = 1
+
+#EXERCICIO 9
+
+# valor = input("Informe um valor: ")
+# print("Valor informado: ", valor)
+# tipo = type(valor)
+# x_str = "123"
+# x = int(x_str)
+# xf = float(x)
+# sao_iguais = x == xf
+# print("Um float é igual a um int?", sao_iguais)
+
+#True
+
+#

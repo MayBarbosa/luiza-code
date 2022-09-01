@@ -1,5 +1,2 @@
 # luiza-code
-Aulas do Luiza Code
-
-
-linha criada na lida 5
+Testes e exercícios das Aulas do Luiza Code <3
