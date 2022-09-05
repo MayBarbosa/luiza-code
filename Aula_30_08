@@ -56,20 +56,19 @@
 # foo('May', '27', 'PM')
 # foo('May', '27', 'PM', 'casada')
 
-# import time
+import time
 
-# def decorator(funcao):
-#     def wrapper():
-#         tempo_inicio = time.time()
-#         funcao()
-#         tempo_final = time.time()
+def decorator(funcao):
+    def wrapper():
+        tempo_inicio = time.time()
+        funcao()
+        tempo_final = time.time()
 
-#         calculo = tempo_final - tempo_inicio
+        calculo = tempo_final - tempo_inicio
 
-#         print(f'A {funcao.__name__}, levou total de {calculo} para ser executada')
+        print(f'A {funcao.__name__}, levou total de {calculo} para ser executada')
 
 
-#     return wrapper
 
 # @decorator
 # def run():

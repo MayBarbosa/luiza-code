@@ -1,0 +1,122 @@
+# caixa1 = []
+# caixa1 = ["hozania", "carmen"]
+
+        # #substituir um item da lista
+        # #ordem dos itens começa em 0
+# caixa1[0] = "valquiria"
+
+        # #adicionar um item ao final da lista
+# caixa1.append ("aline")
+
+        # #contar quantidade de valores dentro da lista
+# len(caixa1)
+
+        # #lista dentro de lista
+# caixa1[2] = ['madrinha', "c/c++"]
+
+        # #chamar um item da sublista
+# caixa1[2][0]
+
+        #somar elementos da lista
+# sum(caixa1)
+
+        #somar todos os elementos da lista
+        #com um laço de repetição
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# soma = 0
+# for valor in lista:
+#     soma = soma + valor
+
+# print("resultado", soma)
+
+# soma = sum(lista)
+# print("resultado por sum(): ", soma)
+
+        # somar apens os numeros pares
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# soma = 0
+# for valor in lista:
+#     if valor % 2 == 0:
+#         soma = soma + valor
+# print("resultado", soma)
+
+        #dictionary
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# # indexada
+# lista =[0]
+
+# #lista "nomeada"
+# # Estrutura: Chave/valor
+# dicionario = {}
+# print("dicionário vazio: ", dicionario)
+# dicionario = {
+#     #não existe ordem, chave inteira: "valor texto"
+#     1: "ozair",
+#     2: "pamela",
+#     3: "amanda",
+#     4: "aline",
+#     50: "luan",
+#     44: [1, 2, 3]
+# }
+# print("dicionário chave numerica: ", dicionario)
+# print("chave 3:", dicionario[3])
+# print("chave 5:", dicionario[50])
+
+# existe_chave_5 = 5 in dicionario
+# if existe_chave_5:
+#     print("chave 5:", dicionario[5])
+# else:
+#     print("chave não existe")
+
+#     #tentar pegar uma chave sem precisar testar
+# etiqueta = 5
+# valor_chave_5 = dicionario.get(etiqueta)
+# print("valor chave 5:", valor_chave_5)
+
+# dicionario = {
+#     "nome": "paloma",
+#     "sobrenome": "santos",
+#     "fazluizacode": True
+# }
+# print(dicionario)
+
+# dicionario = {
+#     True: "ozair",
+#     "campos": 44,
+#     "junior": {
+#         "a": [1, 2, 3],
+#     }
+# }
+# print(dicionario)
+
+def comissao_vendedor (valor):
+    return valor + (valor * 0.1)
+
+def comissao_gerente (valor):
+    return valor + (valor + 0.2)
+
+def calcular_comissão(valor, tipo_empregado):
+    if tipo_empregado == "gerente":
+        return comissao_gerente(valor)
+    return comissao_vendedor(valor)
+
+def calcular_comissão2(valor, tipo_empregado):
+    motor_calculo = {
+        "gerente": comissao_gerente,
+        "empregado": comissao_vendedor
+    }
+    calculadora = motor_calculo.get(
+        tipo_empregado,
+        comissao_vendedor
+    )
+    comissao = calculadora(valor)
+    return comissao
+
+tipo_empregado = "empregado"
+valor = 1000
+
+comissao = calcular_comissão(valor, tipo_empregado)
+print(1, comissao)
+
+comissao = calcular_comissão2(valor, tipo_empregado)
+print(2, comissao)
