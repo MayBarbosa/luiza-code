@@ -1,27 +1,22 @@
-cart = []
-# for i in range(5):
-id_user = str(input("Nome: "))
-id_produto = str(input("produto: "))
-price = float(input("preço: "))
-quantity = int(input("quantidade: "))
-
-item = [id_user, id_produto, price, quantity]
-
-def add_item_cart(item1):
-    pass
-
-print(f'{item}')
-
-def soma_valor_total_carrinho(sacola):
-    soma_total = 0
-    for s in sacola:
-        soma_total = soma_total + (s[3] * s[2])
+class Cart:
+    def __init__(self):
+        self.carts = []
     
-    return soma_total
+    def add_item_cart(self, id_product, id_user, price_product, quantity_product):
+        self.carts.append([id_product, id_user, price_product, quantity_product])    
+        return self.carts
 
-def cria_sacola():
-    sacola = [item]
-    valor = soma_valor_total_carrinho(sacola)
-    print(valor)
+    def get_all_items_cart(self):
+        return self.carts
+    
+    def get_item_cart_by_product(self, id_product):
+        cart = [item for item in self.carts if item[0] == id_product]
+        return cart[0]
 
-cria_sacola()
+    def remove_item_id_product(self, id_product):
+        new_cart = []
+        for i, el in enumerate(self.carts):
+            if el[0] == id_product:
+                self.carts.remove(i)
+        
+cart = Cart()
