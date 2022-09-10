@@ -1,0 +1,20 @@
+###  ver se funciona
+GET http://127.0.0.1:8000/
+
+###  cadastro de musica
+POST http://127.0.0.1:8000/musicas
+
+{
+    "nome": "Patience",
+    "artista": "ss",
+    "tempo": 120
+}
+
+###
+GET http://127.0.0.1:8000/musicas/
+
+###
+GET http://127.0.0.1:8000/musicas/1
+
+###
+DELETE http://127.0.0.1:8000/musicas/2
