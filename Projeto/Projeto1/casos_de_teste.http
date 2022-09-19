@@ -1,0 +1,92 @@
+#######################################
+############  usuário  ################
+#######################################
+
+### Bem vindo
+
+GET http://127.0.0.1:8000/ HTTP/1.1
+content-type: application/json
+
+####Criar usuário
+POST http://127.0.0.1:8000/usuario
+# content-type: application/json
+
+{   
+    "id" : 1,
+    "nome": "teste2",
+    "email": "teste2@gmail.com",
+    "senha": "1234"
+}
+###########################################
+###Pegar usuário por id
+GET http://127.0.0.1:8000/usuario/1 HTTP/1.1
+content-type: application/json
+
+###########################################
+###Pegar usuário por nome
+GET http://127.0.0.1:8000/usuario-por-nome/teste2 HTTP/1.1
+content-type: application/json
+
+
+### delete
+
+DELETE http://127.0.0.1:8000/usuario/1 HTTP/1.1
+content-type: application/json
+
+# ​#######################################
+############  endereço  ###############
+#######################################
+# Criar endereço
+POST http://127.0.0.1:8000/usuario/1/endereco/ HTTP/1.1
+content-type: application/json
+
+{
+    "id" : 1,
+    "rua": "Rua Ladrilhada",
+    "cep": "99999-999",
+    "cidade": "São Paulo",
+    "estado": "SP"
+}
+
+### consultar endereço
+GET  http://127.0.0.1:8000/usuario/endereco/1 HTTP/1.1
+content-type: application/json
+
+
+### deletar endereco
+DELETE http://127.0.0.1:8000/usuario/endereco-del/1 HTTP/1.1
+content-type: application/json
+
+
+######################################
+############  produto  ################
+#######################################
+
+# Criar produto
+POST http://127.0.0.1:8000/produto HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nome": "Sorvete",
+    "descricao": "Doce gelado",
+    "preco": 9.99
+}
+
+### deletar produto
+DELETE http://127.0.0.1:8000/produto-del/1 HTTP/1.1
+content-type: application/json
+
+###
+POST http://127.0.0.1:8000/carrinho/ HTTP/1.1
+content-type: application/json
+
+{
+    "id_produtos": [1],
+    "id_usuario": 1,
+    "quantidade_de_produtos": 6
+}
+
+### consultar carrinho
+GET  http://127.0.0.1:8000/carrinho-buscar/1 HTTP/1.1
+content-type: application/json
