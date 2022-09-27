@@ -18,7 +18,7 @@ async def users_crud():
     await connect_db()
     users_collection = db.users_collection
     address_collection = db.address_collection
-    user =  {
+    users =  {
         "email": "lu_domagalu@gmail.com",
         "password": "213sd312re3",
         "is_active": True,
@@ -27,23 +27,23 @@ async def users_crud():
 
     if option == '1':
         # create user
-        user = await create_user(
+        users = await create_user(
             users_collection,
-            user
+            users
         )
-        print(user)
+        print(users)
     elif option == '2':
         # get user
-        user = await get_user_by_email(
+        users = await get_user_by_email(
             users_collection,
-            user["email"]
+            users["email"]
         )
-        print(user)
+        print(users)
     elif option == '3':
         # update
-        user = await get_user_by_email(
+        users = await get_user_by_email(
             users_collection,
-            user["email"]
+            users["email"]
         )
 
         user_data = {
@@ -52,7 +52,7 @@ async def users_crud():
 
         is_updated, numbers_updated = await update_user(
             users_collection,
-            user["_id"],
+            users["_id"],
             user_data
         )
         if is_updated:
@@ -61,14 +61,14 @@ async def users_crud():
             print("Atualização falhou!")
     elif option == '4':
         # delete
-        user = await get_user_by_email(
+        users = await get_user_by_email(
             users_collection,
-            user["email"]
+            users["email"]
         )
 
         result = await delete_user(
             users_collection,
-            user["_id"]
+            users["_id"]
         )
 
         print(result)
@@ -83,10 +83,10 @@ async def users_crud():
     
     elif option == '6':
         #busca endereço
-        user = await get_address_by_user(
+        users = await get_address_by_user(
             address_collection,
             users_collection,
-            user["address"]
+            users["address"]
         )
 
 

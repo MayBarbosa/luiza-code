@@ -2,6 +2,7 @@ from os import environ
 
 from motor.motor_asyncio import AsyncIOMotorClient
 
+DATABASE_URI = "mongodb+srv://maypbarbosa:55145230@luizacode.ddwgqiu.mongodb.net/?retryWrites=true&w=majority"
 
 class DataBase:
     client: AsyncIOMotorClient = None

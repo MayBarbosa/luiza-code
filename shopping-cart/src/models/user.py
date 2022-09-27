@@ -1,11 +1,11 @@
 
-async def create_user(users_collection, user):
+async def create_user(users_collection, users):
     try:
-        user = await users_collection.insert_one(user)
+        users = await users_collection.insert_one(users)
 
-        if user.inserted_id:
-            user = await get_user(users_collection, user.inserted_id)
-            return user
+        if users.inserted_id:
+            users = await get_user(users_collection, users.inserted_id)
+            return users
 
     except Exception as e:
         print(f'create_user.error: {e}')

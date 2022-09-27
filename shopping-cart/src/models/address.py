@@ -1,6 +1,7 @@
-from src.models.user import (
-    get_user_by_email
-)
+async def get_user_by_email(users_collection, email, user):
+    user = await users_collection.find_one({'email': email})
+    return user
+
 
 async def create_address(address_collection, address, users_collection, user):
     try:
@@ -16,7 +17,7 @@ async def create_address(address_collection, address, users_collection, user):
 
 async def get_address(address_collection, address_id):
     try:
-        data = await address_collection.find_one({'_id': address_id})
+        data = await address_collection.find_one({address_id})
         if data:
             return data
     except Exception as e:
@@ -24,7 +25,7 @@ async def get_address(address_collection, address_id):
 
 async def get_address_by_user(address_collection, address, users_collection):
     try:
-        user =  await get_user_by_email(users_collection, address.user.email)
+        user =  await get_user_by_email(address_collection, users_collection, address.user.email)
         
         if address.user.email == user["email"]:
             return address
